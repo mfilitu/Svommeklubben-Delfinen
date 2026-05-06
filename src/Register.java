@@ -12,8 +12,8 @@ public class Register {
         seniorTeam = new Team("Seniorhold");
     }
 
-    public void createMember(String name, int age, boolean status) {
-        Member member = new Member(name, age, status);
+    public void createMember(String name, int age) {
+        Member member = new Member(name, age);
         memberList.add(member);
     }
 
