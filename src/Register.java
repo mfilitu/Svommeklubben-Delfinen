@@ -8,12 +8,24 @@ public class Register {
 
     }
 
-    public void createMember(String name, int age) {
-        Member member = new Member(name, age);
+    public void addMember(Member member) {
         memberList.add(member);
     }
 
+
+    public ArrayList<Member> getMemberList() {
+        return memberList;
     }
+
+    @Override
+    public String toString() {
+        String test = "";
+        for (Member member : memberList) {
+            test += member.toString() + "\n";
+        }
+        return test;
+    }
+}
 
 
 
