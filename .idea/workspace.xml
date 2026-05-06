@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b7ff1f4-94b9-49ef-9ab1-343df1e4ecc4" name="Changes" comment="">
-<<<<<<< Updated upstream
-      <change afterPath="$PROJECT_DIR$/src/Member.java" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/src/ActiveMember.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PassiveMember.java" afterDir="false" />
->>>>>>> Stashed changes
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActiveMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActiveMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PassiveMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PassiveMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Team.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +35,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/mfilitu/Svommeklubben-Delfinen.git&quot;,
-<<<<<<< Updated upstream
-    &quot;accountId&quot;: &quot;3fea1bf1-cfd4-4780-9bcd-52ac77ee7514&quot;
-=======
     &quot;accountId&quot;: &quot;5b341018-c794-4c38-b937-b17c57bf2226&quot;
->>>>>>> Stashed changes
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -57,19 +51,11 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-<<<<<<< Updated upstream
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-=======
->>>>>>> Stashed changes
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-<<<<<<< Updated upstream
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mobtr/Desktop/Svommeklubben-Delfinen&quot;,
-=======
->>>>>>> Stashed changes
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;
   }
 }</component>

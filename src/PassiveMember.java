@@ -1,10 +1,11 @@
-public class PassiveMember {
-    double subscription;
-    public PassiveMember(String name, int age, boolean status, double subscription) {
-        super();
+public class PassiveMember extends Member {
+    Subscriptions subscription;
+    private boolean status = false;
+    public PassiveMember(String name, int age, boolean status, Subscriptions subscription) {
+        super(name, age);
         this.subscription=subscription;
     }
-    public double getSubscription(){
+    public Subscriptions getSubscription(){
         return subscription;
     }
 }
