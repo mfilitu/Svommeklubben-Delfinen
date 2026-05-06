@@ -3,9 +3,10 @@ public class Member {
     private final int age;
     private boolean status = true;
 
-    public Member(String name, int age){
+    public Member(String name, int age, boolean status){
         this.name = name;
         this.age = age;
+        this.status = status;
     }
 
     public boolean isSeniorMember(){
