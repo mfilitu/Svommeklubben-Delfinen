@@ -1,8 +1,7 @@
 public class PassiveMember extends Member {
-    private double subscription;
-    private boolean status = false;
+    double subscription;
     public PassiveMember(String name, int age, boolean status, double subscription) {
-        super(name, age);
+        super(name, age, status);
         this.subscription=subscription;
     }
     public double getSubscription(){

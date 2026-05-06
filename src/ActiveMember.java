@@ -1,12 +1,10 @@
 public class ActiveMember extends Member {
-    private double subscription;
-
+    double subscription;
     public ActiveMember(String name, int age, boolean status, double subscription) {
-        super(name, age);
-        this.subscription = subscription;
+        super(name, age, status);
+        this.subscription=subscription;
     }
-
-    public double getSubscription() {
+    public double getSubscription(){
         return subscription;
     }
 }
