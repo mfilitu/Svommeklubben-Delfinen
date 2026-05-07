@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b7ff1f4-94b9-49ef-9ab1-343df1e4ecc4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/JuniorMemberTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MemberTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PassiveMemberTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RegisterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SeniorMemberTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ActiveMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActiveMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Svommeklubben-Delfinen.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Svommeklubben-Delfinen.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/JuniorMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JuniorMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SeniorMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SeniorMember.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -42,6 +46,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="3DJ3tPSWU1Y3gKGkwMWG6ZNZu6E" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -49,14 +56,37 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.JuniorMemberTest.executor": "Run",
+    "JUnit.MemberTest.executor": "Run",
+    "JUnit.PassiveMemberTest.executor": "Run",
+    "JUnit.RegisterTest.executor": "Run",
+    "JUnit.SeniorMemberTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
