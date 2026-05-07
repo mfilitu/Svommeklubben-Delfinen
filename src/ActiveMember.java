@@ -5,6 +5,9 @@ public class ActiveMember extends Member {
         super(name, age);
         this.fee = 0;
     }
+    public double getFee(){
+        return fee;
+    }
     
 
 }
