@@ -2,17 +2,17 @@ import java.util.ArrayList;
 
 public class Team {
 
-    private String name;
-    private ArrayList<Member> juniorMembers;
-    private ArrayList<Member> seniorMembers;
+    private String teamName;
+    private ArrayList<ActiveMember> juniorMembers;
+    private ArrayList<ActiveMember> seniorMembers;
 
     public Team(String name) {
-        this.name = name;
+        this.teamName = name;
         juniorMembers = new ArrayList<>();
         seniorMembers = new ArrayList<>();
     }
 
-    public void addToTeam(Member member) {
+    public void addToTeam(ActiveMember member) {
         if (member.getAge() < 18) {
             juniorMembers.add(member);
         } else {
@@ -21,7 +21,7 @@ public class Team {
     }
 
     public String toString() {
-        return String.format("Navn: %s\nJuniorhold: %s\nSeniorhold: %s", name, juniorMembers, seniorMembers);
+        return String.format("Navn: %s\nJuniorhold: %s\nSeniorhold: %s", teamName, juniorMembers, seniorMembers);
     }
 
 }
