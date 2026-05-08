@@ -16,16 +16,19 @@ public class JuniorMember extends ActiveMember {
         account += fee;
     }
 
-    public boolean ispaid() {
-        if (account > 0) {
+    public double getAccountBalance() {
+        return account;
+    }
+
+    public boolean isPaid() {
+        if (account >= 0) {
             return true;
-        } else {
-            return false;
-        }
+        } else return false;
     }
-    public void addFee(){
-        account -=fee;
+
+    public void addFee() {
+        account -= fee;
     }
-    }
+}
 
 

@@ -31,6 +31,12 @@ public class Register {
             if (member instanceof PassiveMember){
                 ((PassiveMember) member).addFee();
             }
+            if (member instanceof SeniorMember){
+                ((SeniorMember) member).addFee();
+            }
+            if (member instanceof JuniorMember){
+                ((JuniorMember) member).addFee();
+            }
 
         }
     }

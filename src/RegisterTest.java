@@ -30,4 +30,39 @@ class RegisterTest {
 
         assertEquals(3, arraySize);
     }
+
+    @org.junit.jupiter.api.Test
+    void addFeeToAll() {
+        Register register = new Register();
+        ActiveMember bo = new SeniorMember("Bo", 19);
+        ActiveMember bob = new JuniorMember("Bob", 1);
+        PassiveMember bobby = new PassiveMember("Bobby", 69);
+
+
+        register.addMember(bo);
+        register.addMember(bob);
+        register.addMember(bobby);
+
+        assertFalse(bo.isPaid());
+        assertFalse(bob.isPaid());
+        assertFalse(bobby.isPaid());
+
+        bo.pay();
+        bob.pay();
+        bobby.pay();
+
+        assertTrue(bo.isPaid());
+        assertTrue(bob.isPaid());
+        assertTrue(bobby.isPaid());
+
+        register.AddFeeToAllMembers();
+
+        assertFalse(bo.isPaid());
+        assertFalse(bob.isPaid());
+        assertFalse(bobby.isPaid());
+
+        int arraySize = register.getMemberList().size();
+
+        assertEquals(3, arraySize);
+    }
 }

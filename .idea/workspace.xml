@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8b7ff1f4-94b9-49ef-9ab1-343df1e4ecc4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PassiveMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PassiveMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PassiveMemberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PassiveMemberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActiveMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActiveMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JuniorMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JuniorMember.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RegisterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegisterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SeniorMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SeniorMember.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +54,8 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "JUnit.PassiveMemberTest.executor": "Run",
+    "JUnit.RegisterTest.executor": "Debug",
+    "JUnit.SeniorMemberTest.executor": "Run",
     "JUnit.TeamTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",

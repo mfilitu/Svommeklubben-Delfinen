@@ -12,17 +12,21 @@ public class SeniorMember extends ActiveMember {
     public double getFee() {
         return fee;
     }
-    public void pay() {
+
+    public void pay(){
         account += fee;
     }
 
-    public boolean ispaid() {
-        if (account > 0) {
-            return true;
-        } else {
-            return false;
-        }
+    public double getAccountBalance() {
+        return account;
     }
+
+    public boolean isPaid(){
+        if (account >= 0){
+            return true;
+        } else return false;
+    }
+
     public void addFee(){
         account -= fee;
     }
