@@ -25,6 +25,15 @@ public class Register {
         }
         return test;
     }
+
+    public void AddFeeToAllMembers(){
+        for (Member member : memberList){
+            if (member instanceof PassiveMember){
+                ((PassiveMember) member).addFee();
+            }
+
+        }
+    }
 }
 
 

@@ -15,4 +15,17 @@ class PassiveMemberTest {
 
         assertEquals(500, fee);
     }
+
+    @Test
+    void pay() {
+        PassiveMember bobby = new PassiveMember("Bodil", 24);
+
+        assertFalse(bobby.isPaid());
+        bobby.pay();
+        assertTrue(bobby.isPaid());
+        double balance = bobby.getAccountBalance();
+
+
+        assertEquals(0, balance);
+    }
 }
