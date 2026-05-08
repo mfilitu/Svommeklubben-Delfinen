@@ -9,7 +9,7 @@ public class Member {
     public Member(String name, int age, double fee) {
         this.name = name;
         this.age = age;
-        this.account = 0;
+        this.account = -fee;
         this.fee = fee;
     }
 
@@ -29,11 +29,16 @@ public class Member {
         return name;
     }
 
-    protected void setAccount(double amount){
-        this.account = amount;
-    }
     public double getFee() {
         return fee;
+    }
+
+    protected void setFee(double fee) {
+        this.fee = fee;
+    }
+
+    protected double getAccount(){
+        return account;
     }
 
     public void pay(){

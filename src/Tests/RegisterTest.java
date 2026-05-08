@@ -23,7 +23,7 @@ class RegisterTest {
     void getMemberList() {
         Register register = new Register();
         ActiveMember bo = new SeniorMember("Bo", 17);
-        ActiveMember bob = new ActiveMember("Bob", 1);
+        ActiveMember bob = new JuniorMember("Bob", 1);
         PassiveMember bobby = new PassiveMember("Bobby", 55);
 
 

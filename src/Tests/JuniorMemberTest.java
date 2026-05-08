@@ -10,7 +10,7 @@ class JuniorMemberTest {
     @Test
     void getFee() {
         Register register = new Register();
-        ActiveMember bobby = new JuniorMember("Bo", 15);
+        Member bobby = new JuniorMember("Bo", 15);
 
         register.addMember(bobby);
 
