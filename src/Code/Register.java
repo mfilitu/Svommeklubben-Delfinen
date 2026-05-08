@@ -1,3 +1,5 @@
+package Code;
+
 import java.util.ArrayList;
 
 public class Register {
@@ -31,10 +33,13 @@ public class Register {
             if (member instanceof PassiveMember){
                 ((PassiveMember) member).addFee();
             }
+            if (member instanceof SeniorMember){
+                ((SeniorMember) member).addFee();
+            }
+            if (member instanceof JuniorMember){
+                ((JuniorMember) member).addFee();
+            }
 
         }
     }
 }
-
-
-

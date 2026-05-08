@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b7ff1f4-94b9-49ef-9ab1-343df1e4ecc4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PassiveMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PassiveMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PassiveMemberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PassiveMemberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActiveMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/ActiveMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JuniorMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/JuniorMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JuniorMemberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/JuniorMemberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MemberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/MemberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PassiveMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/PassiveMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PassiveMemberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/PassiveMemberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RegisterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/RegisterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SeniorMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/SeniorMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SeniorMemberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/SeniorMemberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Subscription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Team.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TeamTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/TeamTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +42,12 @@
     &quot;assignee&quot;: &quot;MBaun6&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/mfilitu/Svommeklubben-Delfinen.git",
-    "accountId": "3fea1bf1-cfd4-4780-9bcd-52ac77ee7514"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mfilitu/Svommeklubben-Delfinen.git&quot;,
+    &quot;accountId&quot;: &quot;3fea1bf1-cfd4-4780-9bcd-52ac77ee7514&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -51,7 +62,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "JUnit.JuniorMemberTest.executor": "Run",
     "JUnit.PassiveMemberTest.executor": "Run",
+    "JUnit.RegisterTest.executor": "Debug",
+    "JUnit.SeniorMemberTest.executor": "Run",
     "JUnit.TeamTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",

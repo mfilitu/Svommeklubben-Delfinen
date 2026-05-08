@@ -1,3 +1,5 @@
+package Code;
+
 public class JuniorMember extends ActiveMember {
     private final double fee;
     private double account = 0;
@@ -16,16 +18,18 @@ public class JuniorMember extends ActiveMember {
         account += fee;
     }
 
-    public boolean ispaid() {
-        if (account > 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-    public void addFee(){
-        account -=fee;
-    }
+    public double getAccountBalance() {
+        return account;
     }
 
+    public boolean isPaid() {
+        if (account >= 0) {
+            return true;
+        } else return false;
+    }
+
+    public void addFee() {
+        account -= fee;
+    }
+}
 

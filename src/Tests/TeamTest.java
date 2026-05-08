@@ -1,4 +1,7 @@
+package Tests;
+
 import org.junit.jupiter.api.Test;
+import Code.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 

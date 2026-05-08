@@ -1,4 +1,8 @@
+package Tests;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import Code.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -9,8 +13,8 @@ class MemberTest {
         ActiveMember bo = new SeniorMember("Bo", 19);
 
 
-        assertTrue(bo.isSeniorMember());
-        assertFalse(bo.isJuniorMember());
+        Assertions.assertTrue(bo.isSeniorMember());
+        Assertions.assertFalse(bo.isJuniorMember());
     }
 
     @Test
@@ -18,8 +22,8 @@ class MemberTest {
         ActiveMember bob = new JuniorMember("Bob", 17);
 
 
-        assertTrue(bob.isJuniorMember());
-        assertFalse(bob.isSeniorMember());
+        Assertions.assertTrue(bob.isJuniorMember());
+        Assertions.assertFalse(bob.isSeniorMember());
     }
 
     @Test

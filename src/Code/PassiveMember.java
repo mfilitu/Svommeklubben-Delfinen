@@ -1,3 +1,5 @@
+package Code;
+
 public class PassiveMember extends Member {
     private double fee;
     private double account = 0;
