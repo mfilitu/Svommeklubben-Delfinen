@@ -18,7 +18,7 @@ public class PassiveMember extends Member {
     }
 
     public boolean isPaid(){
-        if (account == 0){
+        if (account > 0){
             return true;
         } else return false;
     }
