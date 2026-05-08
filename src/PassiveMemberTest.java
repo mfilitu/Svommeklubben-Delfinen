@@ -18,12 +18,14 @@ class PassiveMemberTest {
 
     @Test
     void pay() {
-        Register register = new Register();
         PassiveMember bobby = new PassiveMember("Bodil", 24);
 
-        register.addMember(bobby);
+        assertFalse(bobby.isPaid());
+        bobby.pay();
+        assertTrue(bobby.isPaid());
+        double balance = bobby.getAccountBalance();
 
 
-        assertEquals(500, fee);
+        assertEquals(0, balance);
     }
 }

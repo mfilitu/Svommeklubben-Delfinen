@@ -17,15 +17,18 @@ public class PassiveMember extends Member {
         account += fee;
     }
 
+    public double getAccountBalance() {
+        return account;
+    }
+
     public boolean isPaid(){
-        if (account == 0){
+        if (account >= 0){
             return true;
         } else return false;
     }
 
     public void addFee(){
         account -= fee;
-
     }
 
 }
