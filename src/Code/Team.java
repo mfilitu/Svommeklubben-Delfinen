@@ -5,25 +5,19 @@ import java.util.ArrayList;
 public class Team {
 
     private String teamName;
-    private ArrayList<ActiveMember> juniorMembers;
-    private ArrayList<ActiveMember> seniorMembers;
+    private ArrayList<ActiveMember> members;
 
     public Team(String name) {
         this.teamName = name;
-        juniorMembers = new ArrayList<>();
-        seniorMembers = new ArrayList<>();
+        members = new ArrayList<>();
     }
 
     public void addToTeam(ActiveMember member) {
-        if (member.getAge() < 18) {
-            juniorMembers.add(member);
-        } else {
-            seniorMembers.add(member);
-        }
+            members.add(member);
     }
 
     public String toString() {
-        return String.format("Navn: %s\nJuniorhold: %s\nSeniorhold: %s", teamName, juniorMembers, seniorMembers);
+        return String.format("Navn: %s\nmembers: %s", teamName, members);
     }
 
 }

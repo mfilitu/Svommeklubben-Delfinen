@@ -3,10 +3,14 @@ package Code;
 public class Member {
     private final String name;
     private final int age;
+    private double account;
+    private double fee;
 
-    public Member(String name, int age) {
+    public Member(String name, int age, double fee) {
         this.name = name;
         this.age = age;
+        this.account = 0;
+        this.fee = fee;
     }
 
     public boolean isSeniorMember() {
@@ -25,6 +29,30 @@ public class Member {
         return name;
     }
 
+    protected void setAccount(double amount){
+        this.account = amount;
+    }
+    public double getFee() {
+        return fee;
+    }
+
+    public void pay(){
+        account += fee;
+    }
+
+    public double getAccountBalance() {
+        return account;
+    }
+
+    public boolean isPaid(){
+        if (account >= 0){
+            return true;
+        } else return false;
+    }
+
+    public void addFee(){
+        account -= fee;
+    }
 
     @Override
     public String toString() {
