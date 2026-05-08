@@ -1,3 +1,5 @@
+package Code;
+
 public class Result {
     private Member member;
     private SwimmingDiscipline discipline;
