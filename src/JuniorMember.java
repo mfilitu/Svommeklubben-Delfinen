@@ -31,4 +31,3 @@ public class JuniorMember extends ActiveMember {
     }
 }
 
-

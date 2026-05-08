@@ -31,5 +31,3 @@ public class SeniorMember extends ActiveMember {
         account -= fee;
     }
 }
-
-
