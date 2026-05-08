@@ -27,5 +27,3 @@ public class JuniorMember extends ActiveMember {
         account -=fee;
     }
     }
-
-
