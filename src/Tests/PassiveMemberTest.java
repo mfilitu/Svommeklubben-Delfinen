@@ -1,4 +1,8 @@
+package Tests;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import Code.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -20,9 +24,9 @@ class PassiveMemberTest {
     void pay() {
         PassiveMember bobby = new PassiveMember("Bodil", 24);
 
-        assertFalse(bobby.isPaid());
+        Assertions.assertFalse(bobby.isPaid());
         bobby.pay();
-        assertTrue(bobby.isPaid());
+        Assertions.assertTrue(bobby.isPaid());
         double balance = bobby.getAccountBalance();
 
 

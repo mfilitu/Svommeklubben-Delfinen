@@ -1,3 +1,5 @@
+package Code;
+
 public class SeniorMember extends ActiveMember {
     private double fee = 1600;
     private double account = 0;

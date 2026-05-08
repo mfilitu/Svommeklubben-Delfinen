@@ -1,3 +1,5 @@
+package Code;
+
 public class Member {
     private final String name;
     private final int age;

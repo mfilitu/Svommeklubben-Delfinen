@@ -1,3 +1,8 @@
+package Tests;
+
+import org.junit.jupiter.api.Assertions;
+import Code.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class RegisterTest {
@@ -43,23 +48,23 @@ class RegisterTest {
         register.addMember(bob);
         register.addMember(bobby);
 
-        assertFalse(bo.isPaid());
-        assertFalse(bob.isPaid());
-        assertFalse(bobby.isPaid());
+        Assertions.assertFalse(bo.isPaid());
+        Assertions.assertFalse(bob.isPaid());
+        Assertions.assertFalse(bobby.isPaid());
 
         bo.pay();
         bob.pay();
         bobby.pay();
 
-        assertTrue(bo.isPaid());
-        assertTrue(bob.isPaid());
-        assertTrue(bobby.isPaid());
+        Assertions.assertTrue(bo.isPaid());
+        Assertions.assertTrue(bob.isPaid());
+        Assertions.assertTrue(bobby.isPaid());
 
         register.AddFeeToAllMembers();
 
-        assertFalse(bo.isPaid());
-        assertFalse(bob.isPaid());
-        assertFalse(bobby.isPaid());
+        Assertions.assertFalse(bo.isPaid());
+        Assertions.assertFalse(bob.isPaid());
+        Assertions.assertFalse(bobby.isPaid());
 
         int arraySize = register.getMemberList().size();
 
