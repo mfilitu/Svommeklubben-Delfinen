@@ -23,6 +23,7 @@ public class Member {
         return name;
     }
 
+
     @Override
     public String toString() {
         return String.format("%s, %s, %s, %s", name, age, isJuniorMember(), isSeniorMember());
