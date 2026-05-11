@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b7ff1f4-94b9-49ef-9ab1-343df1e4ecc4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Code/PaymentStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/PaymentStatusTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paidMembers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/paidMembers.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Code/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/PaymentStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/PaymentStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unpaidMembers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/unpaidMembers.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +23,7 @@
       <list>
         <option value="Exception" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -56,6 +60,7 @@
     "JUnit.JuniorMemberTest.executor": "Run",
     "JUnit.MemberTest.executor": "Run",
     "JUnit.PassiveMemberTest.executor": "Run",
+    "JUnit.PaymentStatusTest.executor": "Run",
     "JUnit.RegisterTest.executor": "Debug",
     "JUnit.SeniorMemberTest.executor": "Run",
     "JUnit.TeamTest.executor": "Run",
@@ -63,13 +68,24 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/mobtr/Desktop/Svommeklubben-Delfinen",
-    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Code" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
