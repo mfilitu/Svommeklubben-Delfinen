@@ -10,7 +10,6 @@ public class Main {
 
 
 
-        register.addMember(bo);
         register.addMember(bob);
         register.addMember(bobby);
         System.out.println(bo.getFee());
