@@ -23,9 +23,9 @@ public class App {
             switch (input) {
                 case 1:
                     System.out.println("1 = active, 2 = passive");
-                    int memberType = scanner.nextInt();
+                    int memerType = scanner.nextInt();
 
-                    switch (memberType) {
+                    switch (memerType) {
                         case 1:
                             //aktive
                             System.out.println("Navn:");
@@ -142,7 +142,6 @@ public class App {
         System.out.println("2. Vis liste af alle medlemer");
         System.out.println("3. Kontigent overblik");
         System.out.println("4. Vis MedlemsInfo");
-        System.out.println("5. Tilføj medlem til hold");
         System.out.println("--------------------------------------");
     }
 }
