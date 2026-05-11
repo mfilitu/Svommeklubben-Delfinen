@@ -69,7 +69,7 @@ class PaymentStatusTest {
         } catch (FileNotFoundException e) {
             System.out.println("filen findes ikke!");
         }
-        
+
 
         assertEquals("Bo, 1600.0", line);
     }

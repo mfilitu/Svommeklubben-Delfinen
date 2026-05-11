@@ -7,6 +7,7 @@ public class App {
     public static void main(String[] args) throws InvalidAgeException {
 
         Register register = new Register();
+        register.addMembersFromFile();
         PaymentStatus paymentStatus = new PaymentStatus(register);
 
         ResultList resultList = new ResultList();
@@ -172,6 +173,7 @@ public class App {
         } else {
             throw new InvalidAgeException("Personen er for ung/gammel");
         }
+        register.updateFile();
     }
 
     private static void createPassiveMember(int age, Register register, String name) {
@@ -181,7 +183,7 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Betal med det samme? 1 = ja, 2 = nej.");
         if (scanner.nextInt() == 1) member.pay();
-
+        register.updateFile();
     }
 
     private static void printMenu() {

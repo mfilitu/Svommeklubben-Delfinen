@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b7ff1f4-94b9-49ef-9ab1-343df1e4ecc4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/memberList.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/PaymentStatusTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/PaymentStatusTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +71,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mobtr\Desktop\Svommeklubben-Delfinen" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
