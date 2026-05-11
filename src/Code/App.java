@@ -1,13 +1,18 @@
 package Code;
 
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class App {
     public static void main(String[] args) throws InvalidAgeException {
 
         Register register = new Register();
+        ResultList resultList = new ResultList();
         Boolean running = true;
 
+        Team JuniorTeam = new Team("Delfin Ungerne", new Trainer("Jakob Janot"));
+        Team SeniorTeam = new Team("Delfinerne", new Trainer("Cay"));
         Scanner scanner = new Scanner(System.in);
 
         while (running) {
@@ -24,7 +29,7 @@ public class App {
                     System.out.println("1 = active, 2 = passive");
                     int memerType = scanner.nextInt();
 
-                    switch (memerType){
+                    switch (memerType) {
                         case 1:
                             //aktive
                             System.out.println("Navn:");
@@ -57,13 +62,52 @@ public class App {
                     System.out.println("\nListe af alle medlemmer:");
                     System.out.println(register);
                     break;
-                        case 4:
-                            System.out.println("Indtast Navn på medlem for at vise Info:");
-                            scanner.nextLine();
-
+                case 4:
+                    System.out.println("Indtast Navn på medlem for at vise Info:");
+                    scanner.nextLine();
+                    String membername = scanner.nextLine();
+                    showMemberInfo(register, membername, resultList, JuniorTeam, SeniorTeam);
+                    break;
             }
         }
     }
+
+    private static void showMemberInfo(Register register, String name, ResultList resultList, Team juniorTeam, Team seniorTeam) {
+        for (Member member : register.getMemberList()) {
+            if (member.getName().equalsIgnoreCase(name)) {
+                System.out.println("\n--------Medlemsinfo--------");
+                System.out.println(member.toString());
+
+                if (member instanceof ActiveMember) {
+                    boolean aPartOfTeam = false;
+                    for (ActiveMember AJrMembers : juniorTeam.getMembers()) {
+                        if (AJrMembers.equals(member)) {
+                            System.out.println("Hold:" + juniorTeam.getTeamName());
+                            System.out.println("Træner: " + juniorTeam.getTrainer().getTrainerName());
+                            aPartOfTeam = true;
+                            break;}}
+
+                    if (!aPartOfTeam) {
+                        for (ActiveMember AcSeMembers : seniorTeam.getMembers()) {
+                            if (AcSeMembers.equals(member)) {
+                                System.out.println("Hold:" + seniorTeam.getTeamName());
+                                System.out.println("Træner: " + seniorTeam.getTrainer().getTrainerName());
+                                aPartOfTeam = true;}}
+
+                    } if (!aPartOfTeam) {
+                        System.out.println("Medlem er ikke tilknyttet et hold");
+                    } else {
+                        System.out.println("Passive medlemmer kan ikke tilknyttes et hold");}
+                    System.out.println("----------Resultater----------");
+
+                    List<Result> memberResults = resultList.getAllResults().stream().filter
+                            (result -> result.getMember().equals(member)) .collect(Collectors.toList());
+                    if (memberResults.isEmpty()){
+                        System.out.println("Denne member har ikke nogle resultater");
+                        for (Result result : memberResults){
+                            System.out.println("Disciplin: "+result.getDiscipline()+" Tid: "+result.getTime()+" Millisekunder");}}
+                return; }}System.out.println("Medlem ikke Fundet");
+    }}
 
     private static void createMember(int age, Register register, String name) {
         // Note: 1-17 = junior. 18-99 = senior. 0 og 100+ = InvalidAgeException
@@ -88,6 +132,7 @@ public class App {
         System.out.println("2. Vis liste af alle medlemer");
         System.out.println("3. ");
         System.out.println("4. Vis MedlemsInfo");
+        System.out.println();
         System.out.println("--------------------------------------");
     }
 }

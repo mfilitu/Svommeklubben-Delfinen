@@ -6,8 +6,6 @@ public class Team {
 
     private String teamName;
     private Trainer trainer;
-
-
     private ArrayList<ActiveMember> members;
 
     public Team(String name, Trainer trainer) {
@@ -21,6 +19,9 @@ public class Team {
     }
     public ArrayList<ActiveMember> getMembers() {
         return members;
+    }
+    public String getTeamName() {
+        return teamName;
     }
     public Trainer getTrainer(){
         return trainer;
