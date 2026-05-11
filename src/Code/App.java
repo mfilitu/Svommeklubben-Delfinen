@@ -12,7 +12,7 @@ public class App {
 
         Scanner scanner = new Scanner(System.in);
 
-        while (running) { 
+        while (running) {
             printMenu();
             while (!scanner.hasNextInt()) {
                 System.out.println("Indtast et tal:");
@@ -71,9 +71,11 @@ public class App {
                     switch (payment_menu) {
                         case 1:
                             System.out.println(paymentStatus.getRevenue());
+                            paymentStatus.savePaidToFile();
                             break;
                         case 2:
                             System.out.println(paymentStatus.getMissingPayment());
+                            paymentStatus.saveUnpaidToFile();
                             break;
                     }
                     break;
