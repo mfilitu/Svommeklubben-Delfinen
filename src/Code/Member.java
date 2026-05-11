@@ -61,6 +61,7 @@ public class Member {
 
     @Override
     public String toString() {
-        return String.format("%s, %s, JuniorMember: %s, SeniorMember: %s", name, age, isJuniorMember(), isSeniorMember());
+        return String.format("| Navn:%s | Alder: %s | Type %s | Betalt: | Saldo: %.2f kr.|",
+                name, age, getClass().getSimpleName(),isPaid()? "Ja" : "Nej",getAccountBalance());
     }
 }

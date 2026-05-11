@@ -25,7 +25,7 @@ public class App {
                     System.out.println("1 = active, 2 = passive");
                     int memerType = scanner.nextInt();
 
-                    switch (memerType){
+                    switch (memerType) {
                         case 1:
                             //aktive
                             System.out.println("Navn:");
@@ -67,7 +67,7 @@ public class App {
                     //System.out.println("3. ");
                     System.out.println("--------------------------------------");
                     int payment_menu = scanner.nextInt();
-                    switch (payment_menu){
+                    switch (payment_menu) {
                         case 1:
                             System.out.println(paymentStatus.getRevenue());
                             break;
@@ -76,7 +76,10 @@ public class App {
                             break;
                     }
                     break;
-
+                case 4:
+                    System.out.println("Indtast Navn på medlem for at vise Info:");
+                    scanner.nextLine();
+                    break;
             }
         }
     }
@@ -90,7 +93,7 @@ public class App {
             register.addMember(seniorMember);
             System.out.println("Betal med det samme? 1 = ja, 2 = nej.");
             int pay = scanner.nextInt();
-            switch (pay){
+            switch (pay) {
                 case 1:
                     seniorMember.pay();
                     break;
@@ -102,7 +105,7 @@ public class App {
             register.addMember(juniorMember);
             System.out.println("Betal med det samme? 1 = ja, 2 = nej.");
             int pay = scanner.nextInt();
-            switch (pay){
+            switch (pay) {
                 case 1:
                     juniorMember.pay();
                     break;
@@ -122,7 +125,7 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Betal med det samme? 1 = ja, 2 = nej.");
         int pay = scanner.nextInt();
-        switch (pay){
+        switch (pay) {
             case 1:
                 member.pay();
                 break;
@@ -138,6 +141,7 @@ public class App {
         System.out.println("1. Opret medlem");
         System.out.println("2. Vis liste af alle medlemer");
         System.out.println("3. Kontigent overblik");
+        System.out.println("4. Vis MedlemsInfo");
         System.out.println("--------------------------------------");
     }
 }

@@ -11,4 +11,31 @@ public class Result {
         this.timeMilliseconds = timeMilliseconds;
     }
 
+
+
+
+    public Member getMember() {
+        return member;
+    }
+
+    public SwimmingDiscipline getDiscipline() {
+        return discipline;
+    }
+
+    public int getTime() {
+        return timeMilliseconds;
+    }
+
+
+    public int getTimeMilliseconds() {
+        return timeMilliseconds;
+    }
+
+    @Override
+    public String toString() {
+        return member + " - " + discipline + " - " + timeMilliseconds + " ms";
+    }
 }
+
+
+
