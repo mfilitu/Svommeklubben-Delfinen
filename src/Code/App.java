@@ -193,6 +193,7 @@ public class App {
         System.out.println("3. Kontigent overblik");
         System.out.println("4. Vis MedlemsInfo");
         System.out.println("5. Resultater");
+        System.out.println("6. Tilføj medlem til hold");
         System.out.println("--------------------------------------");
     }
 }
