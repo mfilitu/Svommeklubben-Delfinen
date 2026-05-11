@@ -16,6 +16,12 @@ public class Main {
         System.out.println(bo.getFee());
 
 
+        Result bo_res = new Result(bo, SwimmingDiscipline.BackCrawl, 1000);
+
+        ResultList list = new ResultList();
+
+        //list.addResult
+
 
     }
 }

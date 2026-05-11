@@ -21,16 +21,37 @@ public class App {
 
             switch (input) {
                 case 1:
-                    System.out.println("Navn:");
-                    scanner.nextLine();
-                    String name = scanner.nextLine();
-                    System.out.println("Alder:");
+                    System.out.println("1 = active, 2 = passive");
+                    int memerType = scanner.nextInt();
 
-                    int age = scanner.nextInt();
+                    switch (memerType){
+                        case 1:
+                            //aktive
+                            System.out.println("Navn:");
+                            scanner.nextLine();
+                            String name = scanner.nextLine();
+                            System.out.println("Alder:");
 
-                    createMember(age, register, name);
+                            int age = scanner.nextInt();
 
-                    System.out.println(name + " er blevet oprettet som medlem!");
+                            createMember(age, register, name);
+
+                            System.out.println(name + " er blevet oprettet som medlem!");
+                            break;
+                        case 2:
+                            //aktive
+                            System.out.println("Navn:");
+                            scanner.nextLine();
+                            String name_p = scanner.nextLine();
+                            System.out.println("Alder:");
+
+                            int age_p = scanner.nextInt();
+
+                            createPassiveMember(age_p, register, name_p);
+
+                            System.out.println(name_p + " er blevet oprettet som medlem!");
+                    }
+
                     break;
                 case 2:
                     System.out.println("\nListe af alle medlemmer:");
@@ -49,6 +70,10 @@ public class App {
         } else {
             throw new InvalidAgeException("Personen er for ung/gammel");
         }
+    }
+
+    private static void createPassiveMember(int age, Register register, String name) {
+        register.addMember(new PassiveMember(name, age));
     }
 
     private static void printMenu() {
