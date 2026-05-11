@@ -61,6 +61,6 @@ public class Member {
 
     @Override
     public String toString() {
-        return String.format("%s, %s, %s, %s", name, age, isJuniorMember(), isSeniorMember());
+        return String.format("%s, %s, JuniorMember: %s, SeniorMember: %s", name, age, isJuniorMember(), isSeniorMember());
     }
 }
