@@ -57,6 +57,10 @@ public class App {
                     System.out.println("\nListe af alle medlemmer:");
                     System.out.println(register);
                     break;
+                        case 4:
+                            System.out.println("Indtast Navn på medlem for at vise Info:");
+                            scanner.nextLine();
+
             }
         }
     }
@@ -83,6 +87,7 @@ public class App {
         System.out.println("1. Opret medlem");
         System.out.println("2. Vis liste af alle medlemer");
         System.out.println("3. ");
+        System.out.println("4. Vis MedlemsInfo");
         System.out.println("--------------------------------------");
     }
 }
