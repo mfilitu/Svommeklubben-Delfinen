@@ -23,9 +23,9 @@ public class App {
             switch (input) {
                 case 1:
                     System.out.println("1 = active, 2 = passive");
-                    int memerType = scanner.nextInt();
+                    int memberType = scanner.nextInt();
 
-                    switch (memerType) {
+                    switch (memberType) {
                         case 1:
                             //aktive
                             System.out.println("Navn:");
