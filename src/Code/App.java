@@ -9,6 +9,7 @@ public class App {
         Register register = new Register();
         PaymentStatus paymentStatus = new PaymentStatus(register);
 
+        register.addMembersFromFile();
 
         ResultList resultList = new ResultList();
 
