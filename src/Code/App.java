@@ -12,7 +12,7 @@ public class App {
 
         Scanner scanner = new Scanner(System.in);
 
-        while (running) {
+        while (running) { 
             printMenu();
             while (!scanner.hasNextInt()) {
                 System.out.println("Indtast et tal:");
