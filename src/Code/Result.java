@@ -5,13 +5,11 @@ public class Result {
     private SwimmingDiscipline discipline;
     private int timeMilliseconds;
 
-    public Result(Member member, SwimmingDiscipline discipline, int timeMilliseconds){
+    public Result(Member member, SwimmingDiscipline discipline, int timeMilliseconds) {
         this.member = member;
         this.discipline = discipline;
         this.timeMilliseconds = timeMilliseconds;
     }
-
-
 
 
     public Member getMember() {

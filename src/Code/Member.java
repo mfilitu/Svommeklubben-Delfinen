@@ -33,15 +33,7 @@ public class Member {
         return fee;
     }
 
-    protected void setFee(double fee) {
-        this.fee = fee;
-    }
-
-    protected double getAccount(){
-        return account;
-    }
-
-    public void pay(){
+    public void pay() {
         account += fee;
     }
 
@@ -49,19 +41,19 @@ public class Member {
         return account;
     }
 
-    public boolean isPaid(){
-        if (account >= 0){
+    public boolean isPaid() {
+        if (account >= 0) {
             return true;
         } else return false;
     }
 
-    public void addFee(){
+    public void addFee() {
         account -= fee;
     }
 
     @Override
     public String toString() {
         return String.format("| Navn:%s | Alder: %s | Type %s | Betalt: %s | Saldo: %.2f kr.|",
-                name, age, getClass().getSimpleName(),isPaid()? "Ja" : "Nej",getAccountBalance());
+                name, age, getClass().getSimpleName(), isPaid() ? "Ja" : "Nej", getAccountBalance());
     }
 }
