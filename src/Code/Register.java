@@ -31,9 +31,7 @@ public class Register {
 
             for (Member member : memberList) {
 
-                writer.println(
-                        member.getName() + ", " + member.getAge() + ", " + member.isPaid()
-                );
+                writer.println(member.getName() + ", " + member.getAge() + ", " + member.isPaid());
             }
 
         } catch (FileNotFoundException e) {
@@ -66,7 +64,7 @@ public class Register {
                 }
 
                 addMember(member);
-                if (paid){
+                if (paid) {
                     member.pay();
                 }
             }

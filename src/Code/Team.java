@@ -15,18 +15,20 @@ public class Team {
     }
 
     public void addToTeam(ActiveMember member) {
-            members.add(member);
+        members.add(member);
     }
+
     public ArrayList<ActiveMember> getMembers() {
         return members;
     }
+
     public String getTeamName() {
         return teamName;
     }
-    public Trainer getTrainer(){
+
+    public Trainer getTrainer() {
         return trainer;
     }
-
 
 
     public String toString() {
