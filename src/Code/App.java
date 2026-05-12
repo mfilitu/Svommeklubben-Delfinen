@@ -42,6 +42,7 @@ public class App {
 
                             int age = scanner.nextInt();
                             createMember(age, register, name);
+                            register.updateFile();
                             System.out.println(name + " er blevet oprettet som medlem!");
                             break;
 
@@ -52,6 +53,7 @@ public class App {
                             System.out.println("Alder:");
                             int age_p = scanner.nextInt();
                             createPassiveMember(age_p, register, name_p);
+                            register.updateFile();
                             System.out.println(name_p + " er blevet oprettet som medlem!");
                             break;
                     }

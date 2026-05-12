@@ -33,14 +33,6 @@ public class Member {
         return fee;
     }
 
-    protected void setFee(double fee) {
-        this.fee = fee;
-    }
-
-    protected double getAccount() {
-        return account;
-    }
-
     public void pay() {
         account += fee;
     }
