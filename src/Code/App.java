@@ -19,9 +19,6 @@ public class App {
 
         register.addMembersFromFile();
 
-        ResultList resultList = new ResultList();
-
-        Boolean running = true;
         Scanner scanner = new Scanner(System.in);
 
         while (running) {
@@ -89,7 +86,7 @@ public class App {
                     scanner.nextLine();
                     String membername = scanner.nextLine();
                     showMemberInfo(register, membername, resultList, JuniorTeam, SeniorTeam);
-
+                    break;
 
                 case 5:
                     System.out.println("RESULTATER");
@@ -133,7 +130,61 @@ public class App {
                             break;
                     }
                     break;
+
+                case 6:
+                    ;
+                    System.out.println("Indtast medlemsnavn:");
+                    scanner.nextLine();
+                    String teamMemberName = scanner.nextLine();
+
+                    Member foundMember = findMemberByName(register, teamMemberName);
+
+                    if (foundMember == null) {
+                        System.out.println("Medlem ikke fundet.");
+                        break;
+                    }
+
+                    if (!(foundMember instanceof ActiveMember)) {
+                        System.out.println("Passive medlemmer kan ikke tilføjes til hold.");
+                        break;
+                    }
+
+                    System.out.println("vælg et hold");
+                    System.out.println("1. " + JuniorTeam.getTeamName());
+                    System.out.println("2. " + SeniorTeam.getTeamName());
+
+                    int teamChoice = scanner.nextInt();
+
+                    switch(teamChoice) {
+
+                        case 1:
+
+                            if (foundMember.getAge() >=18) {
+                                System.out.println("Senior medlemmer kan ikke tilføjes til et juniorhold.");
+                                break;
+                            }
+                                JuniorTeam.addToTeam((ActiveMember) foundMember);
+                                System.out.println(foundMember.getName() + " blev tilføjet til " + JuniorTeam.getTeamName());
+
+                                break;
+
+
+                        case 2:
+
+                            if (foundMember.getAge() <18) {
+                                System.out.println("Junior medlemmer kan ikke tilføjes til et senior hold.");
+                                break;
+                            }
+                            SeniorTeam.addToTeam((ActiveMember) foundMember);
+                            System.out.println(foundMember.getName() + " blev tilføjet til " + SeniorTeam.getTeamName());
+                            break;
+
+                        default:
+                            System.out.println("ugyldigt holdvalg.");
+                }
+                break;
             }
+
         }
     }
 
