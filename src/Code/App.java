@@ -19,9 +19,6 @@ public class App {
 
         register.addMembersFromFile();
 
-        ResultList resultList = new ResultList();
-
-        Boolean running = true;
         Scanner scanner = new Scanner(System.in);
 
         while (running) {
@@ -89,6 +86,7 @@ public class App {
                     scanner.nextLine();
                     String membername = scanner.nextLine();
                     showMemberInfo(register, membername, resultList, JuniorTeam, SeniorTeam);
+                    break;
 
 
                 case 5:
