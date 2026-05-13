@@ -1,6 +1,7 @@
 package Code;
 
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -13,6 +14,8 @@ public class App {
         Register register = new Register();
         ResultList resultList = new ResultList();
         Boolean running = true;
+
+        List<Tournament> Tlist = new ArrayList<>();
 
         Team JuniorTeam = new Team("Delfin Ungerne", new Trainer("Jakob Janot"));
         Team SeniorTeam = new Team("Delfinerne", new Trainer("Cay"));
@@ -214,8 +217,91 @@ public class App {
                     break;
                 case 7:
                     // TODO tournament
+                    System.out.println("--------------------------------------");
+                    System.out.println("1. Opret en tunering");
+                    System.out.println("2. tilføj medlemmer til turnering");
+                    System.out.println("3. indtast resultater");
+                    System.out.println("4. vis resultater");
+                    System.out.println("--------------------------------------");
+
+                    int valg = scanner.nextInt();
+                    scanner.nextLine();
+
+                    switch (valg) {
+                        case 1:
+                            System.out.println("""
+                                    Hvilken disciplin????
+                                    1 Crawl
+                                    2 BreastStroke
+                                    3 BackCrawl
+                                    4 Butterfly
+                                    """);
+
+                            int choice1 = scanner.nextInt();
+                            scanner.nextLine();
+
+                            SwimmingDiscipline discipline;
+
+                            switch (choice1) {
+                                case 1 -> discipline = SwimmingDiscipline.Crawl;
+                                case 2 -> discipline = SwimmingDiscipline.BreastStroke;
+                                case 3 -> discipline = SwimmingDiscipline.BackCrawl;
+                                case 4 -> discipline = SwimmingDiscipline.Butterfly;
+                                default -> {
+                                    System.out.println("Ugyldigt valg");
+                                    return;
+                                }
+                            }
+
+                            System.out.println("Navn:");
+                            String name = scanner.nextLine();
+
+                            System.out.println("Dato:");
+                            String date = scanner.nextLine();
+
+                            System.out.println("Tid:");
+                            String time = scanner.nextLine();
+
+                            Tournament tournament = new Tournament(name, date, time, discipline);
+                            Tlist.add(tournament);
+                            break;
+                        case 2:
+                            System.out.println("tournament name?");
+
+                            String tname = scanner.nextLine();
+                            for (Tournament tournament1 : Tlist) {
+                                if (tournament1.getName().equalsIgnoreCase(tname)) {
+                                    tournament1.addCompetitors(resultList);
+                                }
+                            }
+                            break;
+
+                        case 3:
+                            System.out.println("tournament name?");
+                            String tournamentName = scanner.nextLine();
+                            for (Tournament tournament2 : Tlist) {
+                                if (tournament2.getName().equalsIgnoreCase(tournamentName)) {
+                                    tournament2.addResultTimes();
+                                }
+                            }
+                            break;
+                        case 4:
+                            // TODO sort
+                            System.out.println("tournament name?");
+                            String tournamentName1 = scanner.nextLine();
+                            for (Tournament tournament2 : Tlist) {
+                                if (tournament2.getName().equalsIgnoreCase(tournamentName1)) {
+                                    System.out.println(tournament2.getResults());
+                                }
+                            }
+                            break;
+
+                    }
+
 
             }
+
+
         }
     }
 
