@@ -1,3 +1,4 @@
+
 package Code;
 
 import java.util.List;
@@ -133,57 +134,6 @@ public class App {
                             break;
                     }
                     break;
-                case 6:
-                    System.out.println("Indtast medlemsnavn:");
-                    scanner.nextLine();
-                    String teamMemberName = scanner.nextLine();
-
-                    Member foundMember = findMemberByName(register, teamMemberName);
-
-                    if (foundMember == null) {
-                        System.out.println("Medlem ikke fundet.");
-                        break;
-                    }
-
-                    if (!(foundMember instanceof ActiveMember)) {
-                        System.out.println("Passive medlemmer kan ikke tilføjes til hold.");
-                        break;
-                    }
-
-                    System.out.println("vælg et hold");
-                    System.out.println("1. " + JuniorTeam.getTeamName());
-                    System.out.println("2. " + SeniorTeam.getTeamName());
-
-                    int teamChoice = scanner.nextInt();
-
-                    switch (teamChoice) {
-
-                        case 1:
-
-                            if (foundMember.getAge() >= 18) {
-                                System.out.println("Senior medlemmer kan ikke tilføjes til et juniorhold.");
-                                break;
-                            }
-                            JuniorTeam.addToTeam((ActiveMember) foundMember);
-                            System.out.println(foundMember.getName() + " blev tilføjet til " + JuniorTeam.getTeamName());
-
-                            break;
-
-
-                        case 2:
-
-                            if (foundMember.getAge() < 18) {
-                                System.out.println("Junior medlemmer kan ikke tilføjes til et senior hold.");
-                                break;
-                            }
-                            SeniorTeam.addToTeam((ActiveMember) foundMember);
-                            System.out.println(foundMember.getName() + " blev tilføjet til " + SeniorTeam.getTeamName());
-                            break;
-
-                        default:
-                            System.out.println("ugyldigt holdvalg.");
-                    }
-                    break;
             }
         }
     }
@@ -201,40 +151,29 @@ public class App {
                             System.out.println("Hold:" + juniorTeam.getTeamName());
                             System.out.println("Træner: " + juniorTeam.getTrainer().getTrainerName());
                             aPartOfTeam = true;
-                            break;
-                        }
-                    }
+                            break;}}
 
                     if (!aPartOfTeam) {
                         for (ActiveMember AcSeMembers : seniorTeam.getMembers()) {
                             if (AcSeMembers.equals(member)) {
                                 System.out.println("Hold:" + seniorTeam.getTeamName());
                                 System.out.println("Træner: " + seniorTeam.getTrainer().getTrainerName());
-                                aPartOfTeam = true;
-                            }
-                        }
+                                aPartOfTeam = true;}}
 
-                    }
-                    if (!aPartOfTeam) {
+                    } if (!aPartOfTeam) {
                         System.out.println("Medlem er ikke tilknyttet et hold");
                     } else {
-                        System.out.println("Passive medlemmer kan ikke tilknyttes et hold");
-                    }
+                        System.out.println("Passive medlemmer kan ikke tilknyttes et hold");}
                     System.out.println("----------Resultater----------");
 
-                    List<Result> memberResults = resultList.getAllResults().stream().filter(result -> result.getMember().equals(member)).collect(Collectors.toList());
-                    if (memberResults.isEmpty()) {
+                    List<Result> memberResults = resultList.getAllResults().stream().filter
+                            (result -> result.getMember().equals(member)) .collect(Collectors.toList());
+                    if (memberResults.isEmpty()){
                         System.out.println("Denne member har ikke nogle resultater");
-                        for (Result result : memberResults) {
-                            System.out.println("Disciplin: " + result.getDiscipline() + " Tid: " + result.getTime() + " Millisekunder");
-                        }
-                    }
-                    return;
-                }
-            }
-            System.out.println("Medlem ikke Fundet");
-        }
-    }
+                        for (Result result : memberResults){
+                            System.out.println("Disciplin: "+result.getDiscipline()+" Tid: "+result.getTime()+" Millisekunder");}}
+                return; }}System.out.println("Medlem ikke Fundet");
+    }}
 
     private static Member findMemberByName(Register register, String name) {
         for (Member member : register.getMemberList()) {
@@ -255,17 +194,12 @@ public class App {
 
         int input = scanner.nextInt();
         switch (input) {
-            case 1:
-                return SwimmingDiscipline.Crawl;
-            case 2:
-                return SwimmingDiscipline.BreastStroke;
+            case 1: return SwimmingDiscipline.Crawl;
+            case 2: return SwimmingDiscipline.BreastStroke;
 
-            case 3:
-                return SwimmingDiscipline.BackCrawl;
-            case 4:
-                return SwimmingDiscipline.Butterfly;
-            default:
-                return null;
+            case 3: return SwimmingDiscipline.BackCrawl;
+            case 4: return SwimmingDiscipline.Butterfly;
+            default: return null;
         }
     }
 
@@ -314,4 +248,9 @@ public class App {
         System.out.println("--------------------------------------");
     }
 }
+
+
+
+
+
 
