@@ -34,6 +34,14 @@ public class PaymentStatus {
         return missingPayment;
     }
 
+    public void getMissingMember(Member m) {
+        for (Member member : memberList) {
+            if (!member.isPaid() && m.getName() == member.getName()) {
+                m.pay();
+            }
+        }
+    }
+
     public void savePaidToFile() {
         try {
             FileWriter writer = new FileWriter("paidMembers.csv");
