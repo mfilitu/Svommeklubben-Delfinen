@@ -32,7 +32,7 @@ public class Member {
     public double getFee() {
         return fee;
     }
-
+    
     public void pay() {
         account += fee;
     }

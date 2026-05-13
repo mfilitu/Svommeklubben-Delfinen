@@ -4,6 +4,7 @@ package Code;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
+import Code.SwimmingDiscipline;
 
 public class App {
     public static void main(String[] args) throws InvalidAgeException {
@@ -19,9 +20,6 @@ public class App {
 
         register.addMembersFromFile();
 
-        ResultList resultList = new ResultList();
-
-        Boolean running = true;
         Scanner scanner = new Scanner(System.in);
 
         while (running) {
@@ -45,7 +43,9 @@ public class App {
                             System.out.println("Alder:");
 
                             int age = scanner.nextInt();
+                            // TODO try catch
                             createMember(age, register, name);
+                            register.updateFile();
                             System.out.println(name + " er blevet oprettet som medlem!");
                             break;
 
@@ -56,6 +56,7 @@ public class App {
                             System.out.println("Alder:");
                             int age_p = scanner.nextInt();
                             createPassiveMember(age_p, register, name_p);
+                            register.updateFile();
                             System.out.println(name_p + " er blevet oprettet som medlem!");
                             break;
                     }
@@ -219,6 +220,11 @@ public class App {
             throw new InvalidAgeException("Personen er for ung/gammel");
         }
     }
+    public static void newTournament (String name, String date, String time, SwimmingDiscipline swimmingDiscipline) {
+        ResultList rl = new ResultList();
+
+        Tournament t = new Tournament(name , date, time, SwimmingDiscipline.BackCrawl);
+    }
 
     private static void createPassiveMember(int age, Register register, String name) {
         Member member = new PassiveMember(name, age);
@@ -238,6 +244,7 @@ public class App {
         System.out.println("4. Vis MedlemsInfo");
         System.out.println("5. Resultater");
         System.out.println("6. Tilføj medlem til hold");
+        System.out.println("7. Opret Turnering");
         System.out.println("--------------------------------------");
     }
 }
