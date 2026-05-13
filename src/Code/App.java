@@ -19,6 +19,7 @@ public class App {
 
         PaymentStatus paymentStatus = new PaymentStatus(register);
 
+
         register.addMembersFromFile();
 
         Scanner scanner = new Scanner(System.in);
