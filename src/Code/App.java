@@ -19,9 +19,6 @@ public class App {
 
         register.addMembersFromFile();
 
-        ResultList resultList = new ResultList();
-
-        Boolean running = true;
         Scanner scanner = new Scanner(System.in);
 
         while (running) {
