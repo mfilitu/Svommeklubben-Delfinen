@@ -30,6 +30,15 @@ public class ResultList {
 
         return filtered.subList(0, Math.min(5, filtered.size()));
     }
+
+    @Override
+    public String toString() {
+        String res = "";
+        for (Result result : results){
+            res += result.getMember().getName() + " " + result.getTimeMilliseconds() +" ms" + "\n";
+        }
+        return res;
+    }
 }
 
 
