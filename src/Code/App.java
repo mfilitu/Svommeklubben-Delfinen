@@ -1,9 +1,11 @@
 
 package Code;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
+
 import Code.SwimmingDiscipline;
 
 public class App {
@@ -151,102 +153,127 @@ public class App {
                             System.out.println("Hold:" + juniorTeam.getTeamName());
                             System.out.println("Træner: " + juniorTeam.getTrainer().getTrainerName());
                             aPartOfTeam = true;
-                            break;}}
+                            break;
+                        }
+                    }
 
                     if (!aPartOfTeam) {
                         for (ActiveMember AcSeMembers : seniorTeam.getMembers()) {
                             if (AcSeMembers.equals(member)) {
                                 System.out.println("Hold:" + seniorTeam.getTeamName());
                                 System.out.println("Træner: " + seniorTeam.getTrainer().getTrainerName());
-                                aPartOfTeam = true;}}
+                                aPartOfTeam = true;
+                            }
+                        }
 
-                    } if (!aPartOfTeam) {
+                    }
+                    if (!aPartOfTeam) {
                         System.out.println("Medlem er ikke tilknyttet et hold");
-                    } else {
-                        System.out.println("Passive medlemmer kan ikke tilknyttes et hold");}
-                    System.out.println("----------Resultater----------");
+                    }
+                } else {
+                    System.out.println("Passive medlemmer kan ikke tilknyttes et hold");
+                }
+                System.out.println("----------Resultater----------");
 
-                    List<Result> memberResults = resultList.getAllResults().stream().filter
-                            (result -> result.getMember().equals(member)) .collect(Collectors.toList());
-                    if (memberResults.isEmpty()){
-                        System.out.println("Denne member har ikke nogle resultater");
-                        for (Result result : memberResults){
-                            System.out.println("Disciplin: "+result.getDiscipline()+" Tid: "+result.getTime()+" Millisekunder");}}
-                return; }}System.out.println("Medlem ikke Fundet");
-    }}
+                List<Result> memberResults = new ArrayList<>();
+                for (Result result : resultList.getAllResults())
+                    if (result.getMember().equals(member)) {
+                        memberResults.add(result);
+                    }
 
-    private static Member findMemberByName(Register register, String name) {
-        for (Member member : register.getMemberList()) {
-            if (member.getName().equalsIgnoreCase(name.trim())) {
-                return member;
+                memberResults.sort(new ResultTimeComparator());
+                if (memberResults.isEmpty()) {
+                    System.out.println("Denne member har ikke nogle resultater");
+                } else {
+                    for (Result result : memberResults) {
+                        System.out.println("Disciplin: " + result.getDiscipline() + " Tid: " + result.getTime() + " Millisekunder");
+                    }
+                }
+                return;
             }
         }
-        return null;
     }
+        System.out.println("Medlem ikke Fundet");
+}
 
-
-    private static SwimmingDiscipline chooseDiscipline(Scanner scanner) {
-        System.out.println("Vælg disciplin:");
-        System.out.println("1 = Crawl");
-        System.out.println("2 = BreastStroke");
-        System.out.println("3 = BackCrawl");
-        System.out.println("4 = Butterfly");
-
-        int input = scanner.nextInt();
-        switch (input) {
-            case 1: return SwimmingDiscipline.Crawl;
-            case 2: return SwimmingDiscipline.BreastStroke;
-
-            case 3: return SwimmingDiscipline.BackCrawl;
-            case 4: return SwimmingDiscipline.Butterfly;
-            default: return null;
+private static Member findMemberByName(Register register, String name) {
+    for (Member member : register.getMemberList()) {
+        if (member.getName().equalsIgnoreCase(name.trim())) {
+            return member;
         }
     }
+    return null;
+}
 
-    private static void createMember(int age, Register register, String name) {
-        Scanner scanner = new Scanner(System.in);
 
-        if (age >= 18 && age <= 100) {
-            Member seniorMember = new SeniorMember(name, age);
-            register.addMember(seniorMember);
-            System.out.println("Betal med det samme? 1 = ja, 2 = nej.");
-            if (scanner.nextInt() == 1) seniorMember.pay();
-        } else if (age > 0 && age < 18) {
-            Member juniorMember = new JuniorMember(name, age);
-            register.addMember(juniorMember);
-            System.out.println("Betal med det samme? 1 = ja, 2 = nej.");
-            if (scanner.nextInt() == 1) juniorMember.pay();
-        } else {
-            throw new InvalidAgeException("Personen er for ung/gammel");
-        }
+private static SwimmingDiscipline chooseDiscipline(Scanner scanner) {
+    System.out.println("Vælg disciplin:");
+    System.out.println("1 = Crawl");
+    System.out.println("2 = BreastStroke");
+    System.out.println("3 = BackCrawl");
+    System.out.println("4 = Butterfly");
+
+    int input = scanner.nextInt();
+    switch (input) {
+        case 1:
+            return SwimmingDiscipline.Crawl;
+        case 2:
+            return SwimmingDiscipline.BreastStroke;
+
+        case 3:
+            return SwimmingDiscipline.BackCrawl;
+        case 4:
+            return SwimmingDiscipline.Butterfly;
+        default:
+            return null;
     }
-    public static void newTournament (String name, String date, String time, SwimmingDiscipline swimmingDiscipline) {
-        ResultList rl = new ResultList();
+}
 
-        Tournament t = new Tournament(name , date, time, SwimmingDiscipline.BackCrawl);
-    }
+private static void createMember(int age, Register register, String name) {
+    Scanner scanner = new Scanner(System.in);
 
-    private static void createPassiveMember(int age, Register register, String name) {
-        Member member = new PassiveMember(name, age);
-        register.addMember(member);
-
-        Scanner scanner = new Scanner(System.in);
+    if (age >= 18 && age <= 100) {
+        Member seniorMember = new SeniorMember(name, age);
+        register.addMember(seniorMember);
         System.out.println("Betal med det samme? 1 = ja, 2 = nej.");
-        if (scanner.nextInt() == 1) member.pay();
+        if (scanner.nextInt() == 1) seniorMember.pay();
+    } else if (age > 0 && age < 18) {
+        Member juniorMember = new JuniorMember(name, age);
+        register.addMember(juniorMember);
+        System.out.println("Betal med det samme? 1 = ja, 2 = nej.");
+        if (scanner.nextInt() == 1) juniorMember.pay();
+    } else {
+        throw new InvalidAgeException("Personen er for ung/gammel");
     }
+}
 
-    private static void printMenu() {
-        System.out.println("--------------------------------------");
-        System.out.println("Menu:");
-        System.out.println("1. Opret medlem");
-        System.out.println("2. Vis liste af alle medlemmer");
-        System.out.println("3. Kontigent overblik");
-        System.out.println("4. Vis MedlemsInfo");
-        System.out.println("5. Resultater");
-        System.out.println("6. Tilføj medlem til hold");
-        System.out.println("7. Opret Turnering");
-        System.out.println("--------------------------------------");
-    }
+public static void newTournament(String name, String date, String time, SwimmingDiscipline swimmingDiscipline) {
+    ResultList rl = new ResultList();
+
+    Tournament t = new Tournament(name, date, time, SwimmingDiscipline.BackCrawl);
+}
+
+private static void createPassiveMember(int age, Register register, String name) {
+    Member member = new PassiveMember(name, age);
+    register.addMember(member);
+
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Betal med det samme? 1 = ja, 2 = nej.");
+    if (scanner.nextInt() == 1) member.pay();
+}
+
+private static void printMenu() {
+    System.out.println("--------------------------------------");
+    System.out.println("Menu:");
+    System.out.println("1. Opret medlem");
+    System.out.println("2. Vis liste af alle medlemmer");
+    System.out.println("3. Kontigent overblik");
+    System.out.println("4. Vis MedlemsInfo");
+    System.out.println("5. Resultater");
+    System.out.println("6. Tilføj medlem til hold");
+    System.out.println("7. Opret Turnering");
+    System.out.println("--------------------------------------");
+}
 }
 
 
