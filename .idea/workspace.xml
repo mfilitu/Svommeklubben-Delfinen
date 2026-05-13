@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b7ff1f4-94b9-49ef-9ab1-343df1e4ecc4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/memberList.csv" beforeDir="false" afterPath="$PROJECT_DIR$/memberList.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paidMembers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/paidMembers.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unpaidMembers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/unpaidMembers.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

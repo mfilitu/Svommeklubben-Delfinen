@@ -45,10 +45,12 @@ public class App {
                                 String name = scanner.nextLine();
                                 System.out.println("Alder:");
                                 int age = scanner.nextInt();
-                                if (age < 0 || age > 120) {
+                                if (age < 0 || age > 100) {
                                     throw new InvalidAgeException("Ugyldig alder");
                                 }
                                 createMember(age, register, name);
+                                paymentStatus.saveUnpaidToFile();
+                                paymentStatus.savePaidToFile();
                                 register.updateFile();
                                 System.out.println(name + " er blevet oprettet som medlem!");
 
@@ -65,10 +67,12 @@ public class App {
                                 System.out.println("Alder:");
                                 int age_p = scanner.nextInt();
 
-                                if (age_p < 0 || age_p > 120) {
+                                if (age_p < 0 || age_p > 100) {
                                     throw new InvalidAgeException("Ugyldig Alder");
                                 }
                                 createPassiveMember(age_p, register, name_p);
+                                paymentStatus.saveUnpaidToFile();
+                                paymentStatus.savePaidToFile();
                                 register.updateFile();
                                 System.out.println(name_p + " er blevet oprettet som medlem!");
 
@@ -93,11 +97,9 @@ public class App {
                     switch (payment_menu) {
                         case 1:
                             System.out.println(paymentStatus.getRevenue());
-                            paymentStatus.savePaidToFile();
                             break;
                         case 2:
                             System.out.println(paymentStatus.getMissingPayment());
-                            paymentStatus.saveUnpaidToFile();
                             break;
                     }
                     break;
