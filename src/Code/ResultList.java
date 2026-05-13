@@ -3,8 +3,8 @@ package Code;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class  ResultList {
-    List<Result> results = new ArrayList<>();
+public class ResultList {
+    private List<Result> results = new ArrayList<>();
 
     public ResultList() {
     }
@@ -17,13 +17,18 @@ public class  ResultList {
         return results;
     }
 
+
     public List<Result> getTopFive(SwimmingDiscipline discipline) {
-        return results
-                .stream()
-                .filter(r -> r.getDiscipline() == discipline)
-                .sorted(Comparator.comparingInt(Result::getTime))
-                .limit(5)
-                .collect(Collectors.toList());
+        List<Result> filtered = new ArrayList<>();
+
+        for (Result r : results) {
+            if (r.getDiscipline() == discipline) {
+                filtered.add(r);
+            }
+        }
+        filtered.sort(new ResultTimeComparator());
+
+        return filtered.subList(0, Math.min(5, filtered.size()));
     }
 }
 

@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8b7ff1f4-94b9-49ef-9ab1-343df1e4ecc4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memberList.csv" beforeDir="false" afterPath="$PROJECT_DIR$/memberList.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Register.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +79,6 @@
     <attachedChunks>
       <set>
         <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
       </set>
     </attachedChunks>
   </component>
