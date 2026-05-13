@@ -34,10 +34,10 @@ public class PaymentStatus {
         return missingPayment;
     }
 
-    public void getMissingMember(Member m) {
+    public void getMissingMember(String m) {
         for (Member member : memberList) {
-            if (!member.isPaid() && m.getName() == member.getName()) {
-                m.pay();
+            if (!member.isPaid() && m == member.getName()) {
+                member.pay();
             }
         }
     }

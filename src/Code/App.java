@@ -90,8 +90,9 @@ public class App {
 
                 case 3:
                     System.out.println("--------------------------------------");
-                    System.out.println("1. Vis forventet kontigent");
+                    System.out.println("1. Vis forventet kontingent");
                     System.out.println("2. Vis missing payment");
+                    System.out.println("3. betal manglende kontingent");
                     System.out.println("--------------------------------------");
                     int payment_menu = scanner.nextInt();
                     switch (payment_menu) {
@@ -100,6 +101,14 @@ public class App {
                             break;
                         case 2:
                             System.out.println(paymentStatus.getMissingPayment());
+                            break;
+                        case 3:
+                            System.out.println("Indtast medlemsnavn");
+                            scanner.next();
+                            String payment_name = scanner.nextLine();
+                            paymentStatus.getMissingMember(payment_name);
+                            paymentStatus.saveUnpaidToFile();
+                            paymentStatus.savePaidToFile();
                             break;
                     }
                     break;
@@ -238,11 +247,6 @@ public class App {
         } else {
             throw new InvalidAgeException("Personen er for ung/gammel");
         }
-    }
-    public static void newTournament (String name, String date, String time, SwimmingDiscipline swimmingDiscipline) {
-        ResultList rl = new ResultList();
-
-        Tournament t = new Tournament(name , date, time, SwimmingDiscipline.BackCrawl);
     }
 
     private static void createPassiveMember(int age, Register register, String name) {
