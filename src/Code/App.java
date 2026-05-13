@@ -1,6 +1,7 @@
 
 package Code;
 
+import java.sql.SQLOutput;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -37,27 +38,42 @@ public class App {
 
                     switch (memerType) {
                         case 1:
-                            System.out.println("Navn:");
-                            scanner.nextLine();
-                            String name = scanner.nextLine();
-                            System.out.println("Alder:");
+                            try {
+                                System.out.println("Navn:");
+                                scanner.nextLine();
+                                String name = scanner.nextLine();
+                                System.out.println("Alder:");
+                                int age = scanner.nextInt();
+                                if (age < 0 || age > 120) {
+                                    throw new InvalidAgeException("Ugyldig alder");
+                                }
+                                createMember(age, register, name);
+                                register.updateFile();
+                                System.out.println(name + " er blevet oprettet som medlem!");
 
-                            int age = scanner.nextInt();
-                            // TODO try catch
-                            createMember(age, register, name);
-                            register.updateFile();
-                            System.out.println(name + " er blevet oprettet som medlem!");
+                            } catch (InvalidAgeException e) {
+                                System.out.println(e.getMessage());
+                            }
                             break;
 
                         case 2:
-                            System.out.println("Navn:");
-                            scanner.nextLine();
-                            String name_p = scanner.nextLine();
-                            System.out.println("Alder:");
-                            int age_p = scanner.nextInt();
-                            createPassiveMember(age_p, register, name_p);
-                            register.updateFile();
-                            System.out.println(name_p + " er blevet oprettet som medlem!");
+                            try {
+                                System.out.println("Navn:");
+                                scanner.nextLine();
+                                String name_p = scanner.nextLine();
+                                System.out.println("Alder:");
+                                int age_p = scanner.nextInt();
+
+                                if (age_p < 0 || age_p > 120) {
+                                    throw new InvalidAgeException("Ugyldig Alder");
+                                }
+                                createPassiveMember(age_p, register, name_p);
+                                register.updateFile();
+                                System.out.println(name_p + " er blevet oprettet som medlem!");
+
+                            } catch (InvalidAgeException e) {
+                                System.out.println(e.getMessage());
+                            }
                             break;
                     }
                     break;
