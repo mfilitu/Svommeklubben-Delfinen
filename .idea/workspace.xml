@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b7ff1f4-94b9-49ef-9ab1-343df1e4ecc4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Member.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778665121154</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="stave fejl fix linje 258">
+      <option name="closed" value="true" />
+      <created>1778666665775</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1778666665775</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,7 +125,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="payment ting" />
     <MESSAGE value="kontingents betaling næsten done" />
-    <option name="LAST_COMMIT_MESSAGE" value="kontingents betaling næsten done" />
+    <MESSAGE value="stave fejl fix linje 258" />
+    <option name="LAST_COMMIT_MESSAGE" value="stave fejl fix linje 258" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
