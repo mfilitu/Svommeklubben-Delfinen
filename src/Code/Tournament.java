@@ -9,35 +9,35 @@ public class Tournament {
     private String date;
     private String time;
     private List<Member> competitors;
-    private List<ResultList> results;
-    private SwimmingDiscipline sd;
+    private SwimmingDiscipline swimmingDiscipline;
     private ResultList tourResult;
 
-    public Tournament(String name, String date, String time, SwimmingDiscipline sd) {
+    public Tournament(String name, String date, String time, SwimmingDiscipline swimmingDiscipline) {
         this.name = name;
         this.date = date;
         this.time = time;
         this.competitors = new ArrayList<>();
-        this.sd = sd;
+        this.swimmingDiscipline = swimmingDiscipline;
         this.tourResult = new ResultList();
     }
 
-    public void addCompetitor(Member competitor) {
-        competitors.add(competitor);
+    public void addCompetitors(ResultList res) {
+        List<Result> ListogResults = res.getTopFive(swimmingDiscipline);
+        for (Result result : ListogResults){
+            competitors.add(result.getMember());
+        }
+
     }
 
-    public void addResult(String result) {
-        //results.add(result);
-    }
-
-    public void addTimes(){
+    public void addResultTimes(){
         Scanner scanner = new Scanner(System.in);
         for (Member member : competitors){
             System.out.println(member.getName());
             int time = scanner.nextInt();
-            Result result = new Result(member, sd, time);
+            Result result = new Result(member, swimmingDiscipline, time);
             tourResult.addResult(result);
         }
+
     }
 
     public String getName() {
@@ -56,12 +56,12 @@ public class Tournament {
         return competitors;
     }
 
-    public List<ResultList> getResults() {
-        return results;
+    public ResultList getResults() {
+        return tourResult;
     }
 
     @Override
     public String toString() {
-        return "Tournament{" + "name: " + name + '\'' + ", date: " + date + '\'' + ", time: " + time + '\'' + ", competitors: " + competitors + ", results: " + results + '}';
+        return "Tournament{" + "name: " + name + '\'' + ", date: " + date + '\'' + ", time: " + time + '\'' + ", competitors: " + competitors + ", results: " + tourResult + '}';
     }
 }

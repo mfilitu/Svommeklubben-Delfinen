@@ -25,6 +25,15 @@ public class  ResultList {
                 .limit(5)
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public String toString() {
+        String res = "";
+        for (Result result : results){
+            res += result.getMember().getName() + " " + result.getTimeMilliseconds() +" ms" + "\n";
+        }
+        return res;
+    }
 }
 
 
