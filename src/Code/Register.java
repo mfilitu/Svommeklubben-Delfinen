@@ -51,9 +51,11 @@ public class Register {
 
                 String[] data = line.split(",");
 
+                // Dette trimmer dataen fra memberList.csv
                 String name = data[0].trim();
                 int age = Integer.parseInt(data[1].trim());
                 boolean paid = Boolean.parseBoolean(data[2].trim());
+
 
                 ActiveMember member;
 
