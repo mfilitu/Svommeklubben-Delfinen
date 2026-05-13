@@ -41,6 +41,8 @@ public class Member {
         return account;
     }
 
+
+
     public void pay() {
         account += fee;
     }

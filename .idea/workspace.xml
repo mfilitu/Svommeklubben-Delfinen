@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b7ff1f4-94b9-49ef-9ab1-343df1e4ecc4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memberList.csv" beforeDir="false" afterPath="$PROJECT_DIR$/memberList.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/ResultList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/ResultList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/Tournament.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Tournament.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +38,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/mfilitu/Svommeklubben-Delfinen.git&quot;,
-    &quot;accountId&quot;: &quot;3fea1bf1-cfd4-4780-9bcd-52ac77ee7514&quot;
+    &quot;accountId&quot;: &quot;98f0d9b3-1a23-461a-a23f-fcd7dbe2fb23&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -46,28 +52,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.App.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JuniorMemberTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MemberTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PassiveMemberTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RegisterTest.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.SeniorMemberTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TeamTest.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mobtr/Desktop/Svommeklubben-Delfinen&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Application.Main.executor": "Run",
+    "JUnit.JuniorMemberTest.executor": "Run",
+    "JUnit.MemberTest.executor": "Run",
+    "JUnit.PassiveMemberTest.executor": "Run",
+    "JUnit.RegisterTest.executor": "Debug",
+    "JUnit.SeniorMemberTest.executor": "Run",
+    "JUnit.TeamTest.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/mobtr/Desktop/Svommeklubben-Delfinen",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Code" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mobtr\Desktop\Svommeklubben-Delfinen" />
     </key>
@@ -88,7 +102,33 @@
       <option name="presentableId" value="Default" />
       <updated>1777986559849</updated>
       <workItem from="1778263279761" duration="2784000" />
+      <workItem from="1778504682201" duration="16611000" />
     </task>
+    <task id="LOCAL-00001" summary="addToTeam">
+      <option name="closed" value="true" />
+      <created>1778572250874</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1778572250874</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fix">
+      <option name="closed" value="true" />
+      <created>1778572362209</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1778572362209</updated>
+    </task>
+    <task id="LOCAL-00003" summary="new class">
+      <option name="closed" value="true" />
+      <created>1778575491578</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1778575491578</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +138,10 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="addToTeam" />
+    <MESSAGE value="fix" />
+    <MESSAGE value="new class" />
+    <option name="LAST_COMMIT_MESSAGE" value="new class" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
