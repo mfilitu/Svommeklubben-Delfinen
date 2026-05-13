@@ -341,7 +341,7 @@ public class App {
 
                     List<Result> memberResults = resultList.getAllResults().stream().filter(result -> result.getMember().equals(member)).collect(Collectors.toList());
                     if (memberResults.isEmpty()) {
-                        System.out.println("Denne member har ikke nogle resultater");
+                        System.out.println("Dette medlem har ikke nogle resultater");
                         for (Result result : memberResults) {
                             System.out.println("Disciplin: " + result.getDiscipline() + " Tid: " + result.getTime() + " Millisekunder");
                         }
@@ -349,8 +349,8 @@ public class App {
                     return;
                 }
             }
-            System.out.println("Medlem ikke Fundet");
         }
+        System.out.println("Medlem ikke Fundet");
     }
 
     private static Member findMemberByName(Register register, String name) {
