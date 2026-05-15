@@ -216,85 +216,104 @@ public class App {
                     }
                     break;
                 case 7:
-                    // TODO tournament
-                    System.out.println("--------------------------------------");
-                    System.out.println("1. Opret en tunering");
-                    System.out.println("2. tilføj medlemmer til turnering");
-                    System.out.println("3. indtast resultater");
-                    System.out.println("4. vis resultater");
-                    System.out.println("--------------------------------------");
+                    boolean tournamentLogic = true;
+                    while (tournamentLogic) {
+                        // TODO tournament
+                        System.out.println("--------------------------------------");
+                        System.out.println("1. Opret en tunering");
+                        System.out.println("2. Tilføj medlemmer til turnering");
+                        System.out.println("3. Indtast resultater");
+                        System.out.println("4. Vis resultater");
+                        System.out.println("0. Tilbage");
+                        System.out.println("--------------------------------------");
 
-                    int valg = scanner.nextInt();
-                    scanner.nextLine();
+                        int valg = scanner.nextInt();
+                        scanner.nextLine();
 
-                    switch (valg) {
-                        case 1:
-                            System.out.println("""
-                                    Hvilken disciplin????
-                                    1 Crawl
-                                    2 BreastStroke
-                                    3 BackCrawl
-                                    4 Butterfly
-                                    """);
+                        switch (valg) {
+                            case 1:
+                                System.out.println("""
+                                        Hvilken disciplin????
+                                        1 Crawl
+                                        2 BreastStroke
+                                        3 BackCrawl
+                                        4 Butterfly
+                                        """);
 
-                            int choice1 = scanner.nextInt();
-                            scanner.nextLine();
+                                int choice1 = scanner.nextInt();
+                                scanner.nextLine();
 
-                            SwimmingDiscipline discipline;
+                                SwimmingDiscipline discipline;
 
-                            switch (choice1) {
-                                case 1 -> discipline = SwimmingDiscipline.Crawl;
-                                case 2 -> discipline = SwimmingDiscipline.BreastStroke;
-                                case 3 -> discipline = SwimmingDiscipline.BackCrawl;
-                                case 4 -> discipline = SwimmingDiscipline.Butterfly;
-                                default -> {
-                                    System.out.println("Ugyldigt valg");
-                                    return;
+                                switch (choice1) {
+                                    case 1 -> discipline = SwimmingDiscipline.Crawl;
+                                    case 2 -> discipline = SwimmingDiscipline.BreastStroke;
+                                    case 3 -> discipline = SwimmingDiscipline.BackCrawl;
+                                    case 4 -> discipline = SwimmingDiscipline.Butterfly;
+                                    default -> {
+                                        System.out.println("Ugyldigt valg");
+                                        return;
+                                    }
                                 }
-                            }
 
-                            System.out.println("Navn:");
-                            String name = scanner.nextLine();
+                                System.out.println("Navn:");
+                                String name = scanner.nextLine();
 
-                            System.out.println("Dato:");
-                            String date = scanner.nextLine();
+                                System.out.println("Dato:");
+                                String date = scanner.nextLine();
 
-                            System.out.println("Tid:");
-                            String time = scanner.nextLine();
+                                System.out.println("Tid:");
+                                String time = scanner.nextLine();
 
-                            Tournament tournament = new Tournament(name, date, time, discipline);
-                            Tlist.add(tournament);
-                            break;
-                        case 2:
-                            System.out.println("tournament name?");
-
-                            String tname = scanner.nextLine();
-                            for (Tournament tournament1 : Tlist) {
-                                if (tournament1.getName().equalsIgnoreCase(tname)) {
-                                    tournament1.addCompetitors(resultList);
+                                Tournament tournament = new Tournament(name, date, time, discipline);
+                                Tlist.add(tournament);
+                                break;
+                            case 2:
+                                System.out.println("Liste af turneringer:\n");
+                                for (Tournament tournament_print : Tlist) {
+                                    System.out.println(tournament_print.getName() + "\n");
                                 }
-                            }
-                            break;
+                                System.out.println("Skriv navnet på turneringen:");
 
-                        case 3:
-                            System.out.println("tournament name?");
-                            String tournamentName = scanner.nextLine();
-                            for (Tournament tournament2 : Tlist) {
-                                if (tournament2.getName().equalsIgnoreCase(tournamentName)) {
-                                    tournament2.addResultTimes();
+                                String tname = scanner.nextLine();
+                                for (Tournament tournament1 : Tlist) {
+                                    if (tournament1.getName().equalsIgnoreCase(tname)) {
+                                        tournament1.addCompetitors(resultList);
+                                    }
                                 }
-                            }
-                            break;
-                        case 4:
-                            // TODO sort
-                            System.out.println("tournament name?");
-                            String tournamentName1 = scanner.nextLine();
-                            for (Tournament tournament2 : Tlist) {
-                                if (tournament2.getName().equalsIgnoreCase(tournamentName1)) {
-                                    System.out.println(tournament2.getResults());
+                                break;
+
+                            case 3:
+                                System.out.println("Liste af turneringer:\n");
+                                for (Tournament tournament_print : Tlist) {
+                                    System.out.println(tournament_print.getName() + "\n");
                                 }
-                            }
-                            break;
+                                System.out.println("Skriv navnet på turneringen:");
+                                String tournamentName = scanner.nextLine();
+                                for (Tournament tournament2 : Tlist) {
+                                    if (tournament2.getName().equalsIgnoreCase(tournamentName)) {
+                                        tournament2.addResultTimes();
+                                    }
+                                }
+                                break;
+                            case 4:
+                                // TODO sort
+                                System.out.println("Liste af turneringer:\n");
+                                for (Tournament tournament_print : Tlist) {
+                                    System.out.println(tournament_print.getName() + "\n");
+                                }
+                                System.out.println("Skriv navnet på turneringen:");
+                                String tournamentName1 = scanner.nextLine();
+                                for (Tournament tournament2 : Tlist) {
+                                    if (tournament2.getName().equalsIgnoreCase(tournamentName1)) {
+                                        System.out.println(tournament2.getResults());
+                                    }
+                                }
+                                break;
+                            case 0:
+                                tournamentLogic = false;
+                        }
+
 
                     }
 
@@ -350,7 +369,6 @@ public class App {
                 }
             }
         }
-        System.out.println("Medlem ikke Fundet");
     }
 
     private static Member findMemberByName(Register register, String name) {
@@ -422,7 +440,7 @@ public class App {
         System.out.println("4. Vis MedlemsInfo");
         System.out.println("5. Resultater");
         System.out.println("6. Tilføj medlem til hold");
-        System.out.println("7. Opret Turnering");
+        System.out.println("7. Turneringer");
         System.out.println("--------------------------------------");
     }
 }
