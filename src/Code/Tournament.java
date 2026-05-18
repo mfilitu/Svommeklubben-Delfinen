@@ -44,14 +44,6 @@ public class Tournament {
         return name;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
     public void showTournamentInfo() {
         System.out.println("\n------------- STÆVNE INFO -------------");
         System.out.println("Navn: " + name);
@@ -69,38 +61,28 @@ public class Tournament {
         }
     }
 
-    public List<Member> getCompetitors() {
-        return competitors;
-    }
-
     public List<Result> getResults() {
         List<Result> filtered = new ArrayList<>();
 
         for (Result r : tourResult.getAllResults()) {
-                filtered.add(r);
+            filtered.add(r);
         }
         filtered.sort(new ResultTimeComparator());
 
         return filtered.subList(0, Math.min(5, filtered.size()));
     }
 
-    public void showResults(){
+    public void showResults() {
         List<Result> results = getResults();
 
         System.out.println("\n---------- RESULTATER ----------");
 
-        if(results.isEmpty()) {
+        if (results.isEmpty()) {
             System.out.println("Ingen resultater endnu.");
         } else {
             int placement = 1;
-            for (Result result : results){
-                System.out.printf(
-                        "%d %s | %s | %s ms\n",
-                        placement,
-                        result.getMember().getName(),
-                        result.getDiscipline(),
-                        result.getTime()
-                );
+            for (Result result : results) {
+                System.out.printf("%d %s | %s | %s ms\n", placement, result.getMember().getName(), result.getDiscipline(), result.getTime());
                 placement++;
             }
         }

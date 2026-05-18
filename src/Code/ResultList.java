@@ -1,7 +1,6 @@
 package Code;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class ResultList {
     private List<Result> results = new ArrayList<>();
@@ -34,8 +33,8 @@ public class ResultList {
     @Override
     public String toString() {
         String res = "";
-        for (Result result : results){
-            res += result.getMember().getName() + " " + result.getTimeMilliseconds() +" ms" + "\n";
+        for (Result result : results) {
+            res += result.getMember().getName() + " " + result.getTimeMilliseconds() + " ms" + "\n";
         }
         return res;
     }
