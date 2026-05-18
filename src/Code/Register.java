@@ -55,20 +55,30 @@ public class Register {
                 String name = data[0].trim();
                 int age = Integer.parseInt(data[1].trim());
                 boolean paid = Boolean.parseBoolean(data[2].trim());
+                String status = data[3].trim();
 
+                if (status.equalsIgnoreCase("active")){
+                    ActiveMember member;
 
-                ActiveMember member;
+                    if (age < 18) {
+                        member = new JuniorMember(name, age);
+                    } else {
+                        member = new SeniorMember(name, age);
+                    }
 
-                if (age < 18) {
-                    member = new JuniorMember(name, age);
-                } else {
-                    member = new SeniorMember(name, age);
-                }
+                    addMember(member);
+                    if (paid) {
+                        member.pay();
+                    }
+                } else if (status.equalsIgnoreCase("passive")) {
+                    PassiveMember member = new PassiveMember(name, age);
 
-                addMember(member);
-                if (paid) {
-                    member.pay();
-                }
+                    addMember(member);
+                    if (paid) {
+                        member.pay();
+                    }
+                } else return;
+
             }
 
             scanner.close();
