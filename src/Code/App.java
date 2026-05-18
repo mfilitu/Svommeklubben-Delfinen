@@ -233,7 +233,7 @@ public class App {
                         switch (valg) {
                             case 1:
                                 System.out.println("""
-                                        Hvilken disciplin????
+                                        Vælg en disciplin
                                         1 Crawl
                                         2 BreastStroke
                                         3 BackCrawl
@@ -271,7 +271,7 @@ public class App {
                             case 2:
                                 System.out.println("Liste af turneringer:\n");
                                 for (Tournament tournament_print : Tlist) {
-                                    System.out.println(tournament_print.getName() + "\n");
+                                    tournament_print.showTournamentInfo();
                                 }
                                 System.out.println("Skriv navnet på turneringen:");
 
@@ -286,7 +286,7 @@ public class App {
                             case 3:
                                 System.out.println("Liste af turneringer:\n");
                                 for (Tournament tournament_print : Tlist) {
-                                    System.out.println(tournament_print.getName() + "\n");
+                                    tournament_print.showTournamentInfo();
                                 }
                                 System.out.println("Skriv navnet på turneringen:");
                                 String tournamentName = scanner.nextLine();
@@ -297,16 +297,14 @@ public class App {
                                 }
                                 break;
                             case 4:
-                                // TODO sort
-                                System.out.println("Liste af turneringer:\n");
                                 for (Tournament tournament_print : Tlist) {
-                                    System.out.println(tournament_print.getName() + "\n");
+                                    tournament_print.showTournamentInfo();
                                 }
                                 System.out.println("Skriv navnet på turneringen:");
                                 String tournamentName1 = scanner.nextLine();
                                 for (Tournament tournament2 : Tlist) {
                                     if (tournament2.getName().equalsIgnoreCase(tournamentName1)) {
-                                        System.out.println(tournament2.getResults());
+                                        tournament2.showResults();
                                     }
                                 }
                                 break;

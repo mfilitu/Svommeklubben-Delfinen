@@ -22,16 +22,16 @@ public class Tournament {
     }
 
     public void addCompetitors(ResultList res) {
-        List<Result> ListogResults = res.getTopFive(swimmingDiscipline);
-        for (Result result : ListogResults){
+        List<Result> ListofResults = res.getTopFive(swimmingDiscipline);
+        for (Result result : ListofResults) {
             competitors.add(result.getMember());
         }
 
     }
 
-    public void addResultTimes(){
+    public void addResultTimes() {
         Scanner scanner = new Scanner(System.in);
-        for (Member member : competitors){
+        for (Member member : competitors) {
             System.out.println(member.getName());
             int time = scanner.nextInt();
             Result result = new Result(member, swimmingDiscipline, time);
@@ -52,12 +52,60 @@ public class Tournament {
         return time;
     }
 
+    public void showTournamentInfo() {
+        System.out.println("\n------------- STÆVNE INFO -------------");
+        System.out.println("Navn: " + name);
+        System.out.println("Dato: " + date);
+        System.out.println("Tidspunkt: " + time);
+        System.out.println("Disciplin: " + swimmingDiscipline);
+
+        System.out.println("\n------------- Deltagere -------------");
+        if (!competitors.isEmpty()) {
+            for (Member competitor : competitors) {
+                System.out.println("Nanv: " + competitor.getName() + " Alder: " + competitor.getAge());
+            }
+        } else {
+            System.out.println("Ingen deltagere endnu.");
+        }
+    }
+
     public List<Member> getCompetitors() {
         return competitors;
     }
 
-    public ResultList getResults() {
-        return tourResult;
+    public List<Result> getResults() {
+        List<Result> filtered = new ArrayList<>();
+
+        for (Result r : tourResult.getAllResults()) {
+                filtered.add(r);
+        }
+        filtered.sort(new ResultTimeComparator());
+
+        return filtered.subList(0, Math.min(5, filtered.size()));
+    }
+
+    public void showResults(){
+        List<Result> results = getResults();
+
+        System.out.println("\n---------- RESULTATER ----------");
+
+        if(results.isEmpty()) {
+            System.out.println("Ingen resultater endnu.");
+        } else {
+            int placement = 1;
+            for (Result result : results){
+                System.out.printf(
+                        "%d %s | %s | %s ms\n",
+                        placement,
+                        result.getMember().getName(),
+                        result.getDiscipline(),
+                        result.getTime()
+                );
+                placement++;
+            }
+        }
+
+
     }
 
     @Override
