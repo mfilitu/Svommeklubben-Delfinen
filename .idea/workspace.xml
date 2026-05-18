@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b7ff1f4-94b9-49ef-9ab1-343df1e4ecc4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/ActiveMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/ActiveMember.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/JuniorMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/JuniorMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/PassiveMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/PassiveMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/ResultList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/ResultList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Code/Tournament.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Tournament.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

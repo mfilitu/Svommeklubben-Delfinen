@@ -1,12 +1,9 @@
 package Code;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
-
-import Code.SwimmingDiscipline;
 
 public class App {
     public static void main(String[] args) throws InvalidAgeException {
