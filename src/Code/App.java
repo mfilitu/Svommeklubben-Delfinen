@@ -92,21 +92,16 @@ public class App {
                     System.out.println("--------------------------------------");
                     System.out.println("1. Vis forventet kontingent");
                     System.out.println("2. Vis missing payment");
-                    System.out.println("3. betal manglende kontingent");
                     System.out.println("--------------------------------------");
                     int payment_menu = scanner.nextInt();
                     switch (payment_menu) {
                         case 1:
                             System.out.println(paymentStatus.getRevenue());
+                            paymentStatus.saveUnpaidToFile();
+                            paymentStatus.savePaidToFile();
                             break;
                         case 2:
                             System.out.println(paymentStatus.getMissingPayment());
-                            break;
-                        case 3:
-                            System.out.println("Indtast medlemsnavn");
-                            scanner.next();
-                            String payment_name = scanner.nextLine();
-                            paymentStatus.getMissingMember(payment_name);
                             paymentStatus.saveUnpaidToFile();
                             paymentStatus.savePaidToFile();
                             break;
