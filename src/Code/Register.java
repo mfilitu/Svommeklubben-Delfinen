@@ -27,11 +27,18 @@ public class Register {
 
         File file = new File("memberList.csv");
 
+        String activeStatus = "active";
+        String passiveStatus = "passive";
+
         try (PrintWriter writer = new PrintWriter(file)) {
 
             for (Member member : memberList) {
+                if (member instanceof ActiveMember){
+                    writer.println(member.getName() + ", " + member.getAge() + ", " + member.isPaid() + ", " + activeStatus + ", ");
+                } else if (member instanceof PassiveMember) {
+                    writer.println(member.getName() + ", " + member.getAge() + ", " + member.isPaid() + ", " + passiveStatus + ", ");
+                }
 
-                writer.println(member.getName() + ", " + member.getAge() + ", " + member.isPaid() + ", ");
             }
 
         } catch (FileNotFoundException e) {
