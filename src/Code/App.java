@@ -210,12 +210,13 @@ public class App {
                 case 7:
                     boolean tournamentLogic = true;
                     while (tournamentLogic) {
-                        // TODO tournament
+
                         System.out.println("--------------------------------------");
                         System.out.println("1. Opret en tunering");
                         System.out.println("2. Tilføj medlemmer til turnering");
                         System.out.println("3. Indtast resultater");
                         System.out.println("4. Vis resultater");
+                        System.out.println("5. vis turneringer");
                         System.out.println("0. Tilbage");
                         System.out.println("--------------------------------------");
 
@@ -260,11 +261,8 @@ public class App {
                                 Tournament tournament = new Tournament(name, date, time, discipline);
                                 Tlist.add(tournament);
                                 break;
+
                             case 2:
-                                System.out.println("Liste af turneringer:\n");
-                                for (Tournament tournament_print : Tlist) {
-                                    tournament_print.showTournamentInfo();
-                                }
                                 System.out.println("Skriv navnet på turneringen:");
 
                                 String tname = scanner.nextLine();
@@ -273,6 +271,7 @@ public class App {
                                         tournament1.addCompetitors(resultList);
                                     }
                                 }
+                                System.out.println("kvalificerede medlemmer tilføjet");
                                 break;
 
                             case 3:
@@ -289,15 +288,17 @@ public class App {
                                 }
                                 break;
                             case 4:
-                                for (Tournament tournament_print : Tlist) {
-                                    tournament_print.showTournamentInfo();
-                                }
                                 System.out.println("Skriv navnet på turneringen:");
                                 String tournamentName1 = scanner.nextLine();
                                 for (Tournament tournament2 : Tlist) {
                                     if (tournament2.getName().equalsIgnoreCase(tournamentName1)) {
                                         tournament2.showResults();
                                     }
+                                }
+                                break;
+                            case 5:
+                                for (Tournament tournament_print : Tlist) {
+                                    tournament_print.showTournamentInfo();
                                 }
                                 break;
                             case 0:
@@ -343,17 +344,17 @@ public class App {
                     }
                     if (!aPartOfTeam) {
                         System.out.println("Medlem er ikke tilknyttet et hold");
-                    } else {
-                        System.out.println("Passive medlemmer kan ikke tilknyttes et hold");
                     }
+
                     System.out.println("----------Resultater----------");
 
                     List<Result> memberResults = resultList.getAllResults().stream().filter(result -> result.getMember().equals(member)).collect(Collectors.toList());
                     if (memberResults.isEmpty()) {
                         System.out.println("Dette medlem har ikke nogle resultater");
-                        for (Result result : memberResults) {
-                            System.out.println("Disciplin: " + result.getDiscipline() + " Tid: " + result.getTime() + " Millisekunder");
-                        }
+
+                    }
+                    for (Result result : memberResults) {
+                        System.out.println("Disciplin: " + result.getDiscipline() + " Tid: " + result.getTime() + " Millisekunder");
                     }
                     return;
                 }
